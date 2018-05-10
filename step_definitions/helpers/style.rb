@@ -6,10 +6,9 @@ def get_key(item)
   item[0]
 end
 
-def puts_hash(hash)
-  hash.each do |key, value|
-    puts "#{key} : #{value}"
-  end
+def puts_sawyer_resource(sawyer)
+  # puts JSON.pretty_generate(sawyer.to_h).gsub(":", " =>")
+  puts JSON.pretty_generate(sawyer.to_h).gsub(": ", " => ")
 end
 
 def pagination
@@ -19,6 +18,7 @@ def pagination
 end
 
 def continue
+  pagination
   print "Press any key to continue\r"
   gets
   pagination
