@@ -17,3 +17,9 @@ def pagination
   puts "-------------------"
   puts " "
 end
+
+def continue
+  print "Press any key to continue\r"
+  gets
+  pagination
+end
