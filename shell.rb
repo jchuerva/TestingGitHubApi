@@ -12,9 +12,8 @@ Dir["step_definitions/*.rb"].each {|file| load file }
 
 
 cli = HighLine.new
-user_token = cli.ask ("Enter your user token"){ |q| q.default = "54156538972325b0d8ce5a7126b972e671744630" }
+user_token = cli.ask ("Enter your user token"){ |q| q.default = "bcaae0071b8835971ee07e11e73b4e997242ff06" }
 
-client = Octokit::Client.new(:access_token => user_token)
+@client = Octokit::Client.new(:access_token => user_token)
 
-user_menu(client)
-
+user_menu(@client)

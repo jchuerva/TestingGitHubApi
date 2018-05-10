@@ -11,3 +11,9 @@ def puts_hash(hash)
     puts "#{key} : #{value}"
   end
 end
+
+def pagination
+  puts " "
+  puts "-------------------"
+  puts " "
+end
