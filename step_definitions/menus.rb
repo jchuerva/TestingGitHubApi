@@ -16,25 +16,41 @@ end
 
 def open_value(cadena, item)
   # it's a url
-  if get_value(item).include?('https://')
-    resp_body = get_url(cadena[get_key(item)])
-    # one response
-    # if number_elm_reponse(resp_body) == 1
-    #   puts resp_body
-    # else
-      create_menu_elements(resp_body)
-    # end
-  # it's a value  
+  if get_value(item).include?('https://api')
+    url = cadena[get_key(item)]
+    # check if url has parameters
+    # binding.pry
+    parms = url_params(url) if include_param?(url)
+    # remove parameters
+    url_without_params = remove_parameters(url)
+    # request get 
+    resp_body = get_url(url_without_params)
+    create_menu_elements(resp_body)
+  
+      # it's not an url
   else
     puts "User #{get_key(item)}: #{cadena[get_key(item)]}"
   end
 end
 
+def include_param?(url)
+  url.match?(/{.*}/)
+end
+
+def remove_parameters(url)
+  url.gsub(/{.*}/,'')
+end
+
+def url_params(url)
+  url.match(/{.*}/)
+end
+
 def get_elements_response(response)
-  response.map { |item| item[:name] || item[:id] }
+  response.map { |item| item[:name] || item[:login] || item[:id] }
 end
 
 def create_menu_elements(resp_body)
+  # binding.pry
   cli = HighLine.new
     cli.choose do |menu|
     menu.prompt = "Please choose the user information you want to know"
@@ -43,6 +59,7 @@ def create_menu_elements(resp_body)
       menu.choice(item) {puts_hash(resp_body[index]); pagination; create_menu_elements(resp_body)}
     end
     menu.choices(:previous_menu) { pagination; user_menu(@client) }
+    menu.choices(:exit) { abort }
   end
 end
 
