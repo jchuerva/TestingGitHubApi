@@ -18,3 +18,5 @@ Install all gems in the root folder
 ```sh
   ruby app.rb
 ```
+
+![app_draft](https://user-images.githubusercontent.com/5942864/39921624-ebbd7aea-551b-11e8-8c19-65cd14797b9d.gif)
