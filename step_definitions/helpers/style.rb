@@ -1,14 +1,9 @@
-def get_value(item)
-  item[1].to_s
-end
-
-def get_key(item)
-  item[0]
-end
-
 def puts_sawyer_resource(sawyer)
-  # puts JSON.pretty_generate(sawyer.to_h).gsub(":", " =>")
   puts JSON.pretty_generate(sawyer.to_h).gsub(": ", " => ")
+end
+
+def pretty_format(input)
+  puts JSON.pretty_generate(input)
 end
 
 def pagination
@@ -23,3 +18,4 @@ def continue
   gets
   pagination
 end
+
