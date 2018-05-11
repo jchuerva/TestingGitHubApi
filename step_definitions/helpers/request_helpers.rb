@@ -12,7 +12,6 @@ end
 def request_user_token
   $user_token = '' if $user_token.nil?
   cli = HighLine.new
-  # user_token = cli.ask ("Enter your user token") { |q| q.default = "bcaae0071b8835971ee07e11e73b4e997242ff06" }
   $user_token = cli.ask ("Enter your user token") { |q| q.default = $user_token }
 
   generate_client($user_token)

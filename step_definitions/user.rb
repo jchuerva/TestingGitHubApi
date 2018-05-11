@@ -10,6 +10,5 @@ end
 def request_user_name
   @user_name = '' if @user_name.nil?
   cli = HighLine.new
-  # @user_name = cli.ask ("Enter user name"){ |q| q.default = "carlos-testaccount" }
   @user_name = cli.ask ("Enter user name"){ |q| q.default = @user_name }
 end
