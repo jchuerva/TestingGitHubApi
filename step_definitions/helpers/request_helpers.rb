@@ -1,16 +1,14 @@
 def get_resp_body(purl)
   conn = Faraday.new(url: purl) do |faraday|
-    Faraday.token_auth(@user_token)
     faraday.response :json, parser_options: { symbolize_names: false }
     faraday.adapter Faraday.default_adapter
   end
-
-  response = conn.get
-  response.body
+    response = conn.get
+    response.body
 end
 
 def request_user_token
-  @user_token = '' if @user_token.nil?
+  @user_token = '' if @user_token.nil? || !@valid_user_token
   cli = HighLine.new
   @user_token = cli.ask('Enter your user token') { |q| q.default = @user_token }
 
