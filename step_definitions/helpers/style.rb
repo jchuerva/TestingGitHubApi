@@ -1,5 +1,5 @@
 def puts_sawyer_resource(sawyer)
-  puts JSON.pretty_generate(sawyer.to_h).gsub(": ", " => ")
+  puts JSON.pretty_generate(sawyer.to_h).gsub(': ', ' => ')
 end
 
 def pretty_format(input)
@@ -7,9 +7,9 @@ def pretty_format(input)
 end
 
 def pagination
-  puts " "
-  puts "-------------------"
-  puts " "
+  puts ' '
+  puts '-------------------'
+  puts ' '
 end
 
 def continue
@@ -18,4 +18,3 @@ def continue
   gets
   pagination
 end
-

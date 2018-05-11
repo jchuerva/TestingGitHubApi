@@ -9,5 +9,5 @@ end
 def request_org_name
   @org_name = '' if @org_name.nil?
   cli = HighLine.new
-  @org_name = cli.ask ("Enter organization name"){ |q| q.default = @org_name }
+  @org_name = cli.ask('Enter organization name') { |q| q.default = @org_name }
 end

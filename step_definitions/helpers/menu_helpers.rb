@@ -7,12 +7,22 @@ end
 def create_menu_from_hash(cadena_hash)
   cli = HighLine.new
   cli.choose do |menu|
-    menu.prompt = "Please choose the user information you want to know"
+    menu.prompt = 'Please choose the user information you want to know'
 
-    menu.choices(:all_information) { pagination; puts "Option selected: All nformation"; pretty_format(cadena_hash); continue }
+    menu.choices(:all_information) do
+      pagination
+      puts 'Option selected: All information'
+      pretty_format(cadena_hash)
+      continue
+    end
 
-    cadena_hash.each_with_index do |item, index|
-      menu.choice(item[0]) {pagination; puts "Option selected: #{item[0]}"; value_or_menu(item[1]); continue}
+    cadena_hash.each_with_index do |item, _index|
+      menu.choice(item[0]) do
+        pagination
+        puts "Option selected: #{item[0]}"
+        value_or_menu(item[1])
+        continue
+      end
     end
     menu.choices(:previous_menu) { main_menu }
     menu.choices(:exit) { abort }
@@ -26,16 +36,21 @@ def menu_array_hash(array_of_hash)
 
   cli = HighLine.new
   cli.choose do |menu|
-    menu.prompt = "Please choose the user information you want to know"
+    menu.prompt = 'Please choose the user information you want to know'
     menu_element.each_with_index do |item, index|
-      menu.choice(item) {
-        pagination;
-        puts "Option selected: #{item}";
-        value_or_menu(array_of_hash[index]);
+      menu.choice(item) do
+        pagination
+        puts "Option selected: #{item}"
+        value_or_menu(array_of_hash[index])
         continue
-      }
       end
-    menu.choice(:all_info) { pagination; puts "Option selected: All information"; puts array_of_hash; continue }
+    end
+    menu.choice(:all_info) do
+      pagination
+      puts 'Option selected: All information'
+      puts array_of_hash
+      continue
+    end
     menu.choices(:previous_menu) { eval(@previous_menu) }
     menu.choices(:exit) { abort }
     menu.default = :exit
