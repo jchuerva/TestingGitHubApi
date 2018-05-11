@@ -11,11 +11,6 @@ def main_menu
     end
     menu.choices(:org_information_api) do
       pagination
-      puts 'Option selected: User information'
-      api_user_menu
-    end
-    menu.choices(:org_information_api) do
-      pagination
       puts 'Option selected: Organization information'
       api_org_menu
     end

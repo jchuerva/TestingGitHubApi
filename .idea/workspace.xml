@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8109be00-2a40-49b1-924f-32c50336bb77" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="$PROJECT_DIR$/app.rb" afterPath="$PROJECT_DIR$/app.rb" />
-      <change beforePath="$PROJECT_DIR$/step_definitions/helpers/checks.rb" afterPath="$PROJECT_DIR$/step_definitions/helpers/checks.rb" />
-      <change beforePath="$PROJECT_DIR$/step_definitions/helpers/menu_helpers.rb" afterPath="$PROJECT_DIR$/step_definitions/helpers/menu_helpers.rb" />
-      <change beforePath="$PROJECT_DIR$/step_definitions/helpers/request_helpers.rb" afterPath="$PROJECT_DIR$/step_definitions/helpers/request_helpers.rb" />
-      <change beforePath="$PROJECT_DIR$/step_definitions/helpers/style.rb" afterPath="$PROJECT_DIR$/step_definitions/helpers/style.rb" />
       <change beforePath="$PROJECT_DIR$/step_definitions/main_menu.rb" afterPath="$PROJECT_DIR$/step_definitions/main_menu.rb" />
-      <change beforePath="$PROJECT_DIR$/step_definitions/octokit_menu.rb" afterPath="$PROJECT_DIR$/step_definitions/octokit_menu.rb" />
-      <change beforePath="$PROJECT_DIR$/step_definitions/organization.rb" afterPath="$PROJECT_DIR$/step_definitions/organization.rb" />
-      <change beforePath="$PROJECT_DIR$/step_definitions/user.rb" afterPath="$PROJECT_DIR$/step_definitions/user.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +17,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="request_helpers.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/step_definitions/helpers/request_helpers.rb">
+      <file leaf-file-name="style.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/step_definitions/helpers/style.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="288">
+              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_menu.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/step_definitions/main_menu.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -65,12 +65,12 @@
         <option value="$PROJECT_DIR$/shell.rb" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/step_definitions/helpers/checks.rb" />
-        <option value="$PROJECT_DIR$/step_definitions/main_menu.rb" />
         <option value="$PROJECT_DIR$/step_definitions/octokit_menu.rb" />
         <option value="$PROJECT_DIR$/step_definitions/organization.rb" />
         <option value="$PROJECT_DIR$/step_definitions/user.rb" />
         <option value="$PROJECT_DIR$/step_definitions/helpers/menu_helpers.rb" />
         <option value="$PROJECT_DIR$/step_definitions/helpers/request_helpers.rb" />
+        <option value="$PROJECT_DIR$/step_definitions/main_menu.rb" />
       </list>
     </option>
   </component>
@@ -255,12 +255,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525981747489</updated>
-      <workItem from="1525981749090" duration="13637000" />
+      <workItem from="1525981749090" duration="13814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13637000" />
+    <option name="totallyTimeSpent" value="13814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3440" height="1440" extended-state="0" />
@@ -323,14 +323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step_definitions/helpers/style.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -366,14 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/step_definitions/main_menu.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/step_definitions/helpers/checks.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -402,6 +386,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step_definitions/helpers/style.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/step_definitions/main_menu.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
