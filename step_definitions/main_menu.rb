@@ -7,12 +7,12 @@ def main_menu
     menu.choices(:user_information_api) do
       pagination
       puts 'Option selected: User information'
-      api_user_menu
+      api_menu('user')
     end
     menu.choices(:org_information_api) do
       pagination
       puts 'Option selected: Organization information'
-      api_org_menu
+      api_menu('org')
     end
     menu.choices(:octokit) do
       pagination
@@ -24,4 +24,11 @@ def main_menu
     menu.default = :exit
     pagination
   end
+end
+
+def welcome_message
+  puts ""
+  puts "###########################"
+  puts "Tool for testing GitHub API"
+  puts "###########################"
 end

@@ -1,7 +1,7 @@
 def create_menu_from_url(url_to_menu)
-  @api_response = get_resp_body(url_to_menu)
+  api_response = get_resp_body(url_to_menu)
 
-  create_menu_from_hash(@api_response)
+  create_menu_from_hash(api_response)
 end
 
 def create_menu_from_hash(cadena_hash)
@@ -59,5 +59,5 @@ def menu_array_hash(array_of_hash)
 end
 
 def name_elements_resp(response)
-  response.map { |item| item['name'] || item['login'] || item['id'] }
+  response.map { |item| item['name'] || item['login'] || item['id'] || item[:name] || item[:login] || item[:id]}
 end

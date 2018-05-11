@@ -1,0 +1,9 @@
+# tests and coverage output
+*.xml
+.bundle
+.ruby-version
+=.vendor/*
+.idea/
+tmp_reports/*
+reports/*
+Gemfile.lock
