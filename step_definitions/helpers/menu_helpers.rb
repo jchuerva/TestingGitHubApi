@@ -1,7 +1,9 @@
-def create_menu_from_url(url_to_menu)
-  api_response = get_resp_body(url_to_menu)
+def create_menu_from_url(value)
+  create_menu_from_hash(api_response(value))
+end
 
-  create_menu_from_hash(api_response)
+def api_response(value)
+  value == 'user' ? GitHubFaradayResponse.new(@user_name).users : GitHubFaradayResponse.new(@org_name).orgs
 end
 
 def create_menu_from_hash(cadena_hash)

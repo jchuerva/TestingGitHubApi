@@ -1,4 +1,5 @@
 gem 'highline'
-# gem "github_api"
+gem 'faraday'
+gem 'faraday_middleware'
 gem 'json'
 gem 'octokit', '~> 4.0'

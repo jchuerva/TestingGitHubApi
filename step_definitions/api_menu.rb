@@ -2,8 +2,8 @@ def api_menu(value)
   @previous_menu = "api_menu('#{value}'"
   value == 'user' ? request_user_name : request_org_name
   pagination
-  url = value == 'user' ? "https://api.github.com/users/#{@user_name.to_s}" : "https://api.github.com/orgs/#{@org_name.to_s}"
-  create_menu_from_url(url)
+
+  create_menu_from_url(value)
   api_menu(value)
 end
 
