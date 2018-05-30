@@ -3,7 +3,7 @@ def value_or_menu(item)
   when String then
     if item.include?('https://api')
       url_without_params = remove_parameters(item)
-      resp_body = get_resp_body(url_without_params)
+      resp_body = api_response(url_without_params)
       case resp_body
       when Hash then # response has only one element
         create_menu_from_hash(resp_body)

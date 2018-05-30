@@ -3,7 +3,16 @@ def create_menu_from_url(value)
 end
 
 def api_response(value)
-  value == 'user' ? GitHubFaradayResponse.new(@user_name).users : GitHubFaradayResponse.new(@org_name).orgs
+  case value
+  when 'user' then
+    get_faraday.get("/users/#{@user_name}").body
+    # GitHubFaradayResponse.new(@user_name).users
+  when 'org' then
+    get_faraday.get("/orgs/#{@org_name}").body
+    # GitHubFaradayResponse.new(@org_name).orgs
+  else
+    get_faraday.get(value).body
+  end
 end
 
 def create_menu_from_hash(cadena_hash)
